@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+  --fontSize: 16px;
+  --fontFamily: "Red Hat Display";
+  --fontBold: 900;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--fontFamily);
+}
+a {
+  transition: 0.2s;
+}
+a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+main {
+  background-image: url(./images/pattern-background-desktop.svg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-color: var(--paleBlue);
+  background-size: 120rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.card img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.cardText {
+  background-color: #ffff;
+  width: 28.1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--fontSize);
+  text-align: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  -webkit-box-shadow: 0px 4px 31px -14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 31px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 31px -14px rgba(0, 0, 0, 0.75);
+}
+.cardText h1 {
+  color: var(--darkBlue);
+  font-weight: 900;
+  margin: 1rem 0 1rem 0;
+  font-size: 32px;
+}
+.cardText p {
+  max-width: 30ch;
+  color: var(--desaturatedBlue);
+  font-weight: 500;
+  margin: 1rem 0 1rem 0;
+  line-height: 1.5rem;
+}
+.subscription {
+  display: flex;
+  width: 80%;
+  background-color: var(--veryPaleBlue);
+  border-radius: 0.7rem;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.76rem;
+  margin: 0 0 2rem 0;
+}
+.price {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+.price img {
+  margin: 0 0.9rem 0 0;
+}
+.priceInfo p {
+  color: var(--darkBlue);
+  font-weight: 900;
+  margin: 0.1rem;
+}
+.priceInfo small {
+  font-weight: 700;
+  color: var(--desaturatedBlue);
+}
+.ctaChange {
+  color: var(--brightBlue);
+  font-weight: 700;
+}
+.ctaP {
+  background-color: var(--brightBlue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1rem 5.5rem;
+  border-radius: 0.7rem;
+  margin: 0 0 2rem 0;
+  -webkit-box-shadow: 0px 4px 31px -14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 31px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 31px -14px rgba(0, 0, 0, 0.75);
+}
+.ctaCancel {
+  color: var(--desaturatedBlue);
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 0 2rem 0;
+}
+@media only screen and (max-width: 600px) {
+  .cardText {
+    width: 20rem;
+  }
+  .heroImg {
+    width: 20rem;
+  }
+  .cardText p {
+    max-width: 25ch;
+  }
+  .subscription {
+    width: 100%;
+  }
+}
